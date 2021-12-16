@@ -13,7 +13,7 @@ const axios = require('axios').create({
 request(options, function (error, response, body) {
   if (error) throw new Error(error);
 
-  console.log(body);
+  console.log(axios);
 });
 
 app.get('/', function (req, res) {
