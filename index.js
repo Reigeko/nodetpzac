@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-var request = require("request");
+const request = require("request");
 const PORT = process.env.PORT || 5000 // this is very important
 
 const options = { method: 'GET',
