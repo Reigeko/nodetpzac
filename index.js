@@ -3,11 +3,12 @@ const app = express()
 const request = require("request");
 const PORT = process.env.PORT || 5000 // this is very important
 
-const options = { method: 'GET',
+const axios = require('axios').create({
   url: 'https://nodetpbd-4f62.restdb.io/rest/account',
   headers:
    { 'cache-control': 'no-cache',
-     'x-apikey': '1f974012daf1e196860fa4fab287595516513' } };
+     'x-apikey': '1f974012daf1e196860fa4fab287595516513' }
+     });
 
 request(options, function (error, response, body) {
   if (error) throw new Error(error);
